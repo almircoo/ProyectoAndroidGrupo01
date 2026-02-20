@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.proyectogrupo01.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_catalogoFragment"
+            app:destination="@id/catalogoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_prestamoFragment"
+            app:destination="@id/prestamoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catalogoFragment"
+        android:name="com.example.proyectogrupo01.CatalogoFragment"
+        android:label="CatalogoFragment" >
+        <action
+            android:id="@+id/action_catalogoFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_catalogoFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+        <action
+            android:id="@+id/action_catalogoFragment_to_prestamoFragment"
+            app:destination="@id/prestamoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleFragment"
+        android:name="com.example.proyectogrupo01.DetalleFragment"
+        android:label="DetalleFragment" >
+        <action
+            android:id="@+id/action_detalleFragment_to_catalogoFragment"
+            app:destination="@id/catalogoFragment" />
+        <action
+            android:id="@+id/action_detalleFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_detalleFragment_to_prestamoFragment"
+            app:destination="@id/prestamoFragment" />
+        <argument
+            android:name="titulo"
+            app:argType="string" />
+
+        <argument
+            android:name="autor"
+            app:argType="string" />
+
+        <argument
+            android:name="imagenResId"
+            app:argType="integer" />
+        <argument
+            android:name="disponible"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/prestamoFragment"
+        android:name="com.example.proyectogrupo01.PrestamoFragment"
+        android:label="PrestamoFragment" >
+        <action
+            android:id="@+id/action_prestamoFragment_to_catalogoFragment"
+            app:destination="@id/catalogoFragment" />
+        <action
+            android:id="@+id/action_prestamoFragment_to_detalleFragment"
+            app:destination="@id/detalleFragment" />
+        <action
+            android:id="@+id/action_prestamoFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
