@@ -8,22 +8,52 @@
     tools:context=".PrestamoActivity"
     android:background="@color/bg_dark">
 
-    <TextView
-        style="@style/TextView.ScreenTitle"
-        android:id="@+id/txtPres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Préstamos"
-        android:layout_margin="20dp"
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="@color/surface_dark"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/text_white"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            style="@style/TextView.ScreenTitle"
+            android:text="Préstamos"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/btnSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+<!--            android:src="@drawable/ic_search"-->
+<!--            app:tint="@color/text_white"-->
+<!--            android:contentDescription="@string/search" />-->
+    </LinearLayout>
+
+    <!-- RecyclerView de préstamos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPrestamos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@id/txtPres"
+        android:layout_marginHorizontal="8dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintBottom_toTopOf="@id/customBottomNav"/>
 
     <LinearLayout
