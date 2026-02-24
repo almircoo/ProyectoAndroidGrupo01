@@ -39,11 +39,7 @@ class PrestamoAdapter(private val onRenovarClick: (LibroItem) -> Unit) :
                     txtAutor.text = libro.autorNombre
                     txtFechaVencimiento.text = "Vence: ${libro.anioPublicacion + 1} may ${2024}"
 
-                    imgPortada.load(libro.portada) {
-                        placeholder(R.drawable.img_cien_anos)
-                        error(R.drawable.img_1984)
-                        crossfade(true)
-                    }
+                    imgPortada.load(libro.portada)
 
                     btnRenovar.setOnClickListener {
                         onRenovarClick(libro)
