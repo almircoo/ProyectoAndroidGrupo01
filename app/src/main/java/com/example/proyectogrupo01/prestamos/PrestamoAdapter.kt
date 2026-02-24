@@ -37,7 +37,7 @@ class PrestamoAdapter(private val onRenovarClick: (LibroItem) -> Unit) :
                 binding.apply {
                     txtTitulo.text = libro.titulo
                     txtAutor.text = libro.autorNombre
-                    txtFechaVencimiento.text = "Vence: ${libro.anioPublicacion + 1} may ${2024}"
+                    txtFechaVencimiento.text = "Vence: ${libro.anioPublicacion + 1} marzo ${2026}"
 
                     imgPortada.load(libro.portada)
 

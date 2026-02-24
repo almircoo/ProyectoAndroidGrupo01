@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.proyectogrupo01.login.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.proyectogrupo01.RegistroFragment"
+        android:label="RegistroFragment" />
 </navigation>

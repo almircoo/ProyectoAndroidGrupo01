@@ -7,87 +7,99 @@
     android:layout_height="match_parent"
     tools:context=".RegistroActivity">
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
+    <LinearLayout
+        android:id="@+id/registro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/bg_dark"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <!-- TÍTULO -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Registro"
+            android:textColor="@color/text_white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- CORREO -->
+        <EditText
+            android:id="@+id/etCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp"
-            android:gravity="center_horizontal"
-            android:layout_gravity="center" >
+            android:layout_marginBottom="12dp"
+            android:text="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/text_white" />
 
-            <!-- TÍTULO -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Registro"
-                android:textSize="26sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="24dp" />
+        <!-- CONTRASEÑA -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/text_white" />
 
-            <!-- CORREO -->
-            <EditText
-                android:id="@+id/etCorreo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Correo electrónico"
-                android:inputType="textEmailAddress"
-                android:layout_marginBottom="12dp"/>
+        <!-- REPETIR CONTRASEÑA -->
+        <EditText
+            android:id="@+id/etRepeatPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Repetir contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/text_white" />
 
-            <!-- CONTRASEÑA -->
-            <EditText
-                android:id="@+id/etPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Contraseña"
-                android:inputType="textPassword"
-                android:layout_marginBottom="12dp"/>
+        <Spinner
+            android:id="@+id/spRecoveryQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
 
-            <!-- REPETIR CONTRASEÑA -->
-            <EditText
-                android:id="@+id/etRepeatPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Repetir contraseña"
-                android:inputType="textPassword"
-                android:layout_marginBottom="16dp"/>
+        <EditText
+            android:id="@+id/etSecurityAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Respuesta de seguridad"
+            android:textColor="@color/text_white" />
 
-            <Spinner
-                android:id="@+id/spRecoveryQuestion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp" />
+        <!-- TÉRMINOS -->
+        <CheckBox
+            android:id="@+id/cbTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Acepto los Términos y Condiciones"
+            android:textColor="@color/text_white" />
 
-            <EditText
-                android:id="@+id/etSecurityAnswer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Respuesta de seguridad"
-                android:layout_marginBottom="16dp"/>
+        <!-- BOTÓN -->
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue_primary"
+            android:text="Registrarse"
+            android:textColor="@color/text_white" />
 
-            <!-- TÉRMINOS -->
-            <CheckBox
-                android:id="@+id/cbTerms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Acepto los Términos y Condiciones"
-                android:layout_marginBottom="20dp"/>
+        <Button
+            android:id="@+id/btnRegresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue_primary"
+            android:text="Volver a Login"
+            android:textColor="@color/text_white" />
 
-            <!-- BOTÓN -->
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Registrarse"/>
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

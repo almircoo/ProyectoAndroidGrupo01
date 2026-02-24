@@ -23,8 +23,5 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.loginNavfragment, LoginFragment())
-            .commit()
     }
 }
